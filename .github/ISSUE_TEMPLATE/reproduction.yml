@@ -1,0 +1,28 @@
+name: Recovery observation
+description: Share an observed result or a missing reproduction.
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and source fingerprints
+      description: Include the runtime block from comparison.json. Remove local paths and unrelated data.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command and scenario options
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Observed result
+      description: Include verdict, saved channels and call counts. A missing reproduction is useful evidence too.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant sanitized stderr
+      render: text
