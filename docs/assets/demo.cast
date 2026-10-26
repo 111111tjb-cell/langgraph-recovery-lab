@@ -1,0 +1,10 @@
+{"version": 2, "width": 110, "height": 24, "timestamp": 1792938639, "title": "Real LangGraph recovery lab CLI output (local project path abbreviated)", "env": {"TERM": "xterm-256color"}}
+[0, "o", "$ python -m recovery_lab compare\r\n"]
+[0.25, "o", "baseline  repeat 1/1 sync/exit/finish\r\n"]
+[3.922, "o", "          B calls=2 saved=False completed-result-lost\r\n"]
+[3.922, "o", "candidate repeat 1/1 sync/exit/finish\r\n"]
+[8.11, "o", "          B calls=1 saved=True completed-result-preserved\r\n"]
+[8.125, "o", "\r\n"]
+[8.125, "o", "Baseline lost completed work; candidate preserved it.\r\n"]
+[8.125, "o", "Report: <project>\\artifacts\\recorded-demo\\index.html\r\n"]
+[8.141, "o", "exit_code=0\r\n"]
