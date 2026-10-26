@@ -2,6 +2,8 @@
 
 **并行节点出错后，已经成功的工作会不会再执行一次？**
 
+[直接打开在线演示](https://111111tjb-cell.github.io/langgraph-recovery-lab/)，无需安装即可回放实测事件，并打开完整矩阵。页面展示已有记录；执行新的实验请使用下方 Python 命令。
+
 本项目用两个节点和 SQLite 回答这个问题：先注入失败，再启动新的 Python 进程恢复，检查实际保存的结果和节点调用次数。实验不需要大模型、API key 或外部数据库。
 
 这是 [111111tjb-cell](https://github.com/111111tjb-cell) 维护的独立实验。LangGraph 由 LangChain 与社区维护。候选修复来自实验性 fork，不代表官方发布或认可。
