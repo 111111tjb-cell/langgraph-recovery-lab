@@ -2,6 +2,8 @@
 
 **See whether completed work survives a parallel failure.**
 
+[![Recovery lab checks](https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/workflows/check.yml/badge.svg)](https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/workflows/check.yml)
+
 [中文说明](docs/README.zh-CN.md) · [Measured default report](docs/results/default/comparison.md) · [Full Windows matrix](docs/results/matrix/comparison.md)
 
 ![Measured local comparison: B runs twice on the baseline and once on the candidate](docs/assets/comparison.svg)
@@ -14,9 +16,11 @@ In the recorded Windows / Python 3.12.4 default run, both environments reached t
 
 ## Quick start
 
-Use Python 3.12 or newer from the repository directory:
+Use Python 3.12 or newer:
 
 ```sh
+git clone https://github.com/111111tjb-cell/langgraph-recovery-lab.git
+cd langgraph-recovery-lab
 python -m recovery_lab prepare
 python -m recovery_lab compare
 ```
@@ -73,7 +77,7 @@ The command-line driver and its unit tests use only the Python standard library:
 python -m unittest discover -s tests -v
 ```
 
-Graph execution dependencies are isolated in the prepared environments. AI assistance was used in development; verification records describe what was actually exercised.
+Graph execution dependencies are isolated in the prepared environments. The [first hosted CI run](https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/runs/40259639626) passed formatting and unit checks on Linux, macOS and Windows, plus fresh-process integration tests and recovery matrices on Linux and Windows. See [validation scope](VALIDATION.md) for the exact counts. AI assistance was used in development; verification records describe what was actually exercised.
 
 ## Attribution
 

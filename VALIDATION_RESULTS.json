@@ -47,9 +47,28 @@
     "recorded_replay_events": 28,
     "console_errors": 0
   },
+  "hosted_ci": {
+    "date": "2026-10-26",
+    "run_id": 40259639626,
+    "url": "https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/runs/40259639626",
+    "source_commit": "179aa63e10507a8c46d0abe688dded444e273f88",
+    "conclusion": "success",
+    "lint_format_and_unit_platforms": ["ubuntu-latest", "windows-latest", "macos-latest"],
+    "integration_and_matrix_platforms": ["ubuntu-latest", "windows-latest"],
+    "integration_suite_tests_per_platform": 21,
+    "matrix_per_platform": {
+      "baseline_cases": 9,
+      "candidate_cases": 9,
+      "baseline_completed_result_lost": 2,
+      "candidate_completed_result_preserved": 6,
+      "unfinished_node_retried_per_environment": 3,
+      "candidate_recovery_checks_passed": 9
+    },
+    "artifacts": ["recovery-ubuntu-latest", "recovery-windows-latest"]
+  },
   "limits": [
     "Only Windows/Python 3.12.4 was exercised locally",
-    "Hosted GitHub CI has not been run yet",
+    "macOS graph execution and recovery matrix have not been validated",
     "Default Windows sandbox blocks asyncio socketpair; async checks ran in the normal host environment",
     "No throughput, hard-kill durability or exactly-once side-effect guarantee"
   ],
