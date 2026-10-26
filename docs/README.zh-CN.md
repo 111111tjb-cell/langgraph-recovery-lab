@@ -6,11 +6,13 @@
 
 这是 [111111tjb-cell](https://github.com/111111tjb-cell) 维护的独立实验。LangGraph 由 LangChain 与社区维护。候选修复来自实验性 fork，不代表官方发布或认可。
 
-## 两条命令运行
+## 快速运行
 
-推荐 Python 3.12，在项目根目录执行：
+推荐 Python 3.12。先获取代码，再在项目根目录执行准备和对照实验：
 
 ```sh
+git clone https://github.com/111111tjb-cell/langgraph-recovery-lab.git
+cd langgraph-recovery-lab
 python -m recovery_lab prepare
 python -m recovery_lab compare
 ```
@@ -48,6 +50,8 @@ python -m recovery_lab compare --matrix --include-cancelled --repeat 3
 ## 版本和证据
 
 基线为 `langgraph==1.2.17`，候选版固定到 fork 的 `e3263b3742852d4e1576baa60d9307aa0e03f8df`。报告记录实际包版本、两个核心源码文件按 LF 规范化后的 SHA-256，以及是否匹配预期提交。
+
+[首次 GitHub CI](https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/runs/40259639626) 已全部通过：Linux、Windows、macOS 的格式检查和单元测试，以及 Linux、Windows 各 21 项含跨进程恢复的测试、各 18 个矩阵案例。macOS 尚未运行图恢复实验。详细范围见[验证记录](../VALIDATION.md)。
 
 观察自己的环境可以运行：
 
