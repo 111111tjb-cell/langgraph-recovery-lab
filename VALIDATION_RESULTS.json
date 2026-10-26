@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-25",
+  "platform": "Windows",
+  "python": "3.12.4",
+  "tests": {
+    "run": 21,
+    "failures": 0,
+    "skipped": 0
+  },
+  "matrix": {
+    "baseline_cases": 27,
+    "candidate_cases": 27,
+    "worker_processes": 108,
+    "observations": {
+      "baseline": {
+        "completed-result-lost": 6,
+        "completed-result-preserved": 12,
+        "unfinished-node-retried": 9
+      },
+      "candidate": {
+        "completed-result-preserved": 18,
+        "unfinished-node-retried": 9
+      }
+    },
+    "candidate_recovery_checks_passed": 27
+  },
+  "source_verification": {
+    "baseline": {
+      "matches_expected_source": true,
+      "expected_ref": "4c52e129eb1ab69a3da58b799f67929f77d81149"
+    },
+    "candidate": {
+      "matches_expected_source": true,
+      "expected_ref": "e3263b3742852d4e1576baa60d9307aa0e03f8df"
+    }
+  },
+  "runtime_version_constraints": {
+    "count": 41,
+    "baseline": "matched",
+    "candidate": "matched"
+  },
+  "wheel_build": "passed",
+  "installed_cli_outside_source_directory": "passed",
+  "ruff": "passed",
+  "browser": {
+    "desktop_preview": "checked",
+    "recorded_replay_events": 28,
+    "console_errors": 0
+  },
+  "limits": [
+    "Only Windows/Python 3.12.4 was exercised locally",
+    "Hosted GitHub CI has not been run yet",
+    "Default Windows sandbox blocks asyncio socketpair; async checks ran in the normal host environment",
+    "No throughput, hard-kill durability or exactly-once side-effect guarantee"
+  ],
+  "evidence": [
+    "docs/results/default/comparison.json",
+    "docs/results/matrix/comparison.json",
+    "docs/assets/demo.cast",
+    "docs/assets/report-desktop.png"
+  ]
+}

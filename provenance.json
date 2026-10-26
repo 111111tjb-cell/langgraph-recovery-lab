@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "issue": "https://github.com/langchain-ai/langgraph/issues/9397",
+  "baseline": {
+    "package": "langgraph==1.2.17",
+    "repository": "https://github.com/langchain-ai/langgraph",
+    "source_ref": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+    "source_sha256_lf": {
+      "langgraph.pregel._runner": "dc835c835cbd2c783ff1df3ca46343ecab9b4a7f534ed0083be8d0664d21816e",
+      "langgraph.pregel.main": "c96d4424e7a75388aef09afeaa8fcfe17c026e60dafca1331003775ca1bf0ffc"
+    }
+  },
+  "candidate": {
+    "repository": "https://github.com/111111tjb-cell/langgraph",
+    "source_ref": "e3263b3742852d4e1576baa60d9307aa0e03f8df",
+    "status": "experimental fork; not merged upstream as checked on 2026-10-25",
+    "source_sha256_lf": {
+      "langgraph.pregel._runner": "23b0eb49a9bb31735e6642635e26460502b0b14338414c5b2d5b11c1ec3509c6",
+      "langgraph.pregel.main": "5391eedd8be2df27a9f7854b656e76c6e7f00719e5ee2d7ad2a98fea0f45463e"
+    }
+  },
+  "python": "3.12",
+  "scope": "Controlled parallel failure, graceful exit, SQLite persistence and recovery in a fresh process."
+}
