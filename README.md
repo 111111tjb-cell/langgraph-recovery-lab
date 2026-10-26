@@ -4,7 +4,9 @@
 
 [![Recovery lab checks](https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/workflows/check.yml/badge.svg)](https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/workflows/check.yml)
 
-[中文说明](docs/README.zh-CN.md) · [Measured default report](docs/results/default/comparison.md) · [Full Windows matrix](docs/results/matrix/comparison.md)
+**[Open the interactive demo](https://111111tjb-cell.github.io/langgraph-recovery-lab/)** · [中文说明](docs/README.zh-CN.md) · [Measured default report](docs/results/default/comparison.md) · [Full Windows matrix](docs/results/matrix/comparison.md)
+
+Replay the actual recorded events in your browser, with no installation. Use the commands below to execute a new experiment on your machine.
 
 ![Measured local comparison: B runs twice on the baseline and once on the candidate](docs/assets/comparison.svg)
 
@@ -52,7 +54,7 @@ The upstream report is [langchain-ai/langgraph#9397](https://github.com/langchai
 - Both phases run in fresh Python processes. Call counts are persisted separately from the graph checkpoint.
 - Output directories must be new or empty. Existing results are not overwritten.
 
-The checked-in [HTML default report](docs/results/default/index.html) is self-contained: download it and open it locally to use the interactive replay. GitHub's source viewer does not execute its JavaScript. The [actual terminal recording](docs/assets/demo.cast) uses asciinema v2 format. Local project paths in that recording are abbreviated.
+The [online demo](https://111111tjb-cell.github.io/langgraph-recovery-lab/) replays the checked-in default report; its full matrix link opens all recorded cases. The [HTML default report](docs/results/default/index.html) is also self-contained: download it and open it locally for offline use. GitHub's source viewer does not execute its JavaScript. The [actual terminal recording](docs/assets/demo.cast) uses asciinema v2 format. Local project paths in that recording are abbreviated.
 
 ## Existing environments
 
@@ -78,6 +80,8 @@ python -m unittest discover -s tests -v
 ```
 
 Graph execution dependencies are isolated in the prepared environments. The [first hosted CI run](https://github.com/111111tjb-cell/langgraph-recovery-lab/actions/runs/40259639626) passed formatting and unit checks on Linux, macOS and Windows, plus fresh-process integration tests and recovery matrices on Linux and Windows. See [validation scope](VALIDATION.md) for the exact counts. AI assistance was used in development; verification records describe what was actually exercised.
+
+The public demo is generated from the measured default JSON, without separate hand-written result counts. After changing that evidence, run `python -m scripts.build_demo`. CI runs `python -m scripts.build_demo --check` to detect stale published HTML. GitHub Pages serves the `docs/` directory.
 
 ## Attribution
 
