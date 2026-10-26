@@ -1,0 +1,3 @@
+-r shared.txt
+# Experimental fork. This is not an official LangGraph release.
+langgraph @ https://github.com/111111tjb-cell/langgraph/archive/e3263b3742852d4e1576baa60d9307aa0e03f8df.tar.gz#subdirectory=libs/langgraph

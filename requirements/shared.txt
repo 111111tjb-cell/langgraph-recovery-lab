@@ -1,0 +1,6 @@
+# Match the dependency versions used to validate the original fix.
+-c validated-constraints.txt
+langgraph-checkpoint==4.3.0
+langgraph-checkpoint-sqlite==3.1.2
+langchain-core==1.6.5
+aiosqlite==0.22.1
